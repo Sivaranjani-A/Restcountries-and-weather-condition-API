@@ -8,8 +8,7 @@ container.append(row);
 
 var res1=fetch("https://restcountries.com/v2/all")
 .then((data)=>data.json())
-.then((data1)=>{
-  console.log(data1)  
+.then((data1)=>{   
     for(var i=0; i<data1.length; i++){      
       if(data1[i].latlng!=undefined){        
         row.innerHTML += `<div class="col-md-4">
@@ -20,7 +19,7 @@ var res1=fetch("https://restcountries.com/v2/all")
         <h6 class="card-title">Captial : ${data1[i].capital}</h6>
         <h6 class="card-title">Region : ${data1[i].region}</h6>
         <h6 class="card-title">Country Code : ${data1[i].alpha3Code}</h6>                  
-        <button class= "btn btn-primary" id="button" onclick="foo(${data1[i].latlng[0]},${data1[i].latlng[1]})">Click For Weather</a></button>
+        <button class= "btn btn-primary" id="button" onclick="foo(${data1[i].latlng[0]},${data1[i].latlng[1]})">Click For Weather</button>
         </div>
       </div>
       </div>`
