@@ -32,7 +32,7 @@ function foo(a,b){
   fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${a}&lon=${b}&appid=3226ce0ee6d73b13a0cb40a0fb71540e`)
   .then((data)=>data.json())
   .then((data1)=>{    
-    alert(`Temperature: ${data1.main.temp}`);
+    alert(`Country: ${data1.sys.country}          Temperature: ${data1.main.temp}`);
   });
 }
   
